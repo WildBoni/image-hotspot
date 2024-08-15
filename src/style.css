@@ -1,0 +1,12 @@
+#app > div {
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+.pin {
+  position: absolute;
+  background-color: red;
+}
