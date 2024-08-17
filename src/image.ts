@@ -1,5 +1,9 @@
-let image = document.createElement('img');
-image.src = "/world-map.svg";
-image.alt = 'content image';
+function createImage(imgURL: string, text: string = 'content image') {
+  let image = document.createElement('img');
+  image.src = imgURL;
+  image.alt = text;
+  
+  return image;
+}
 
-export default image;
+export {createImage};

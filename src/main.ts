@@ -1,3 +1,5 @@
-import container from "./container";
+import { createContainer } from "./container";
 
-document.body.append(container);
+let container = createContainer();
+let app = document.querySelector("#app");
+app && app.append(container);
