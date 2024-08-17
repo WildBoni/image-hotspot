@@ -1,12 +1,42 @@
-#app > div {
+.container {
   position: relative;
 }
-
-img {
+.container > img {
   width: 100%;
 }
-
-.pin {
+.hotspot-button {
   position: absolute;
-  background-color: red;
+  transform: translateY(-90%) translateX(-50%);
+  /* top:90%;
+  left: 90%; */
+  background-color: transparent;
+  border: none;
+}
+.hotspot-button > img {
+  height: 50px;
+}
+.popover-content {
+  margin: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 400px;
+  position: absolute; /* Position absolutely relative to the nearest positioned ancestor */
+  transition: opacity .4s;
+  opacity: 0;
+}
+.popover-content::after {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid black;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.show {
+  opacity: 1;
+  overflow: visible;
 }
