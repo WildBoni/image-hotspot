@@ -1,16 +1,11 @@
-let popover = document.createElement("div");
-
-function createPopover() {
-  popover.id = "myPopover";
+function createPopover(text: string, id: string) {
+  let popover = document.createElement("div");
+  popover.id = id;
   popover.classList.add("popover-content");
   popover.popover = "auto";
-  popover.textContent = "This is a popover next to the button!";
+  popover.textContent = text;
 
   return popover;
 }
 
-function getPopover(): HTMLDivElement {
-  return popover;
-}
-
-export { createPopover, getPopover };
+export { createPopover };

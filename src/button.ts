@@ -1,17 +1,24 @@
 // need to access container, popover
-import { getPopover } from "./popover";
 import { getContainer } from "./container";
+import { createPopover } from "./popover";
 
-const button = document.createElement("button");
-
-function createButton() {
+function createButton(
+  top: string,
+  left: string,
+  popoverText: string,
+  popoverId: string
+) {
+  const button = document.createElement("button");
   const container = getContainer();
-  const popover: HTMLDivElement = getPopover();
+  const popover = createPopover(popoverText, popoverId);
+
+  container.append(popover);
 
   button.classList.add("hotspot-button");
+  button.style.top = top;
+  button.style.left = left;
   button.popoverTargetElement = popover;
   button.popoverTargetAction = "show";
-  console.dir(button);
 
   let image = document.createElement("img");
   image.src = "/marker.svg";
@@ -19,7 +26,6 @@ function createButton() {
   button.append(image);
 
   button.addEventListener("click", () => {
-    console.log(popover.matches(":popover-open"));
     if (popover.matches(":popover-open")) {
       button.popoverTargetAction = "hide";
       popover.classList.remove("show");
@@ -29,7 +35,7 @@ function createButton() {
       const rect = button.getBoundingClientRect();
       popover.showPopover();
       popover.classList.add("show");
-      console.dir(container.clientWidth - button.offsetLeft);
+
       if (container.clientHeight - button.offsetTop < 100) {
         popover.style.top = `${
           rect.top + window.scrollY - popover.clientHeight
@@ -50,8 +56,4 @@ function createButton() {
   return button;
 }
 
-function getButton() {
-  return button;
-}
-
-export { createButton, getButton };
+export { createButton };
