@@ -1,18 +1,18 @@
 // need to access container, popover
-import { getContainer } from "./container";
-import { createPopover } from "./popover";
+// import { createContainer } from "./container";
+// import { createPopover } from "./popover";
 
 function createButton(
   top: string,
   left: string,
-  popoverText: string,
-  popoverId: string
+  popover: HTMLDivElement,
+  container: HTMLDivElement
 ) {
   const button = document.createElement("button");
-  const container = getContainer();
-  const popover = createPopover(popoverText, popoverId);
-
-  container.append(popover);
+  // const containerEl = createContainer();
+  // const container = containerEl.getContainer();
+  // const popover = createPopover(popoverText, popoverId);
+  // container.append(popover);
 
   button.classList.add("hotspot-button");
   button.style.top = top;

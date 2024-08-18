@@ -1,25 +1,43 @@
 import { createButton } from "./button";
+import { createPopover } from "./popover";
 import { createImage } from "./image";
 
-const container = document.createElement("div");
-
 function createContainer() {
+  const container = document.createElement("div");
   container.id = "container";
   container.classList.add("container");
 
-  return container;
+  function addButton(
+    top: string,
+    left: string,
+    popoverText: string,
+    popoverId: string
+  ) {
+    let popover = createPopover(popoverText, popoverId);
+    container.append(popover);
+    let button = createButton(top, left, popover, container);
+    container.append(button);
+  }
+
+  function addImage(imgURL: string, text: string) {
+    let image = createImage(imgURL, text);
+    container.append(image);
+  }
+
+  function render(parentElement: HTMLElement) {
+    parentElement.append(container);
+  }
+
+  function getContainer() {
+    return container;
+  }
+
+  return {
+    addButton,
+    render,
+    getContainer,
+    addImage,
+  };
 }
 
-function getContainer() {
-  return container;
-}
-
-const image = createImage("/world-map.svg", "world map");
-const button = createButton("20%", "50%", "pop1", "test 1");
-const button2 = createButton("40%", "80%", "pop2", "test 2");
-
-container.append(button);
-container.append(button2);
-container.append(image);
-
-export { createContainer, getContainer };
+export { createContainer };
