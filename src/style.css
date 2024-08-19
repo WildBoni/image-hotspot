@@ -7,8 +7,6 @@
 .hotspot-button {
   position: absolute;
   transform: translateY(-90%) translateX(-50%);
-  /* top:90%;
-  left: 90%; */
   background-color: transparent;
   border: none;
 }
@@ -22,11 +20,11 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   max-width: 400px;
-  position: absolute; /* Position absolutely relative to the nearest positioned ancestor */
-  transition: opacity .4s;
+  position: absolute;
+  transition: opacity 0.4s;
   opacity: 0;
 }
-.popover-content::after {
+/* .popover-content::after {
   content: "";
   position: absolute;
   top: -20px;
@@ -35,7 +33,7 @@
   border-bottom: 10px solid black;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-}
+} */
 .show {
   opacity: 1;
   overflow: visible;

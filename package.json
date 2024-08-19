@@ -1,14 +1,32 @@
 {
   "name": "image-hotspot",
-  "private": true,
   "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+  "description": "A simple image hotspot library using popover API.",
+  "author": "Davide Bonifacio",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WildBoni/image-hotspot"
   },
+  "main": "dist/image-hotspot.cjs.js",
+  "module": "dist/image-hotspot.es.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "build": "tsc && vite build",
+    "build:example": "npm run build && vite --config examples/vite.config.ts",
+    "dev": "vite",
+    "preview": "npm run build && vite preview",
+    "preview:example": "npm run build:example && vite preview --config examples/vite.config.ts"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "hotspot"
+  ],
   "devDependencies": {
+    "@types/node": "^22.4.1",
     "typescript": "^5.5.3",
     "vite": "^5.4.0"
   }

@@ -1,7 +1,3 @@
-// need to access container, popover
-// import { createContainer } from "./container";
-// import { createPopover } from "./popover";
-
 function createButton(
   top: string,
   left: string,
@@ -9,10 +5,6 @@ function createButton(
   container: HTMLDivElement
 ) {
   const button = document.createElement("button");
-  // const containerEl = createContainer();
-  // const container = containerEl.getContainer();
-  // const popover = createPopover(popoverText, popoverId);
-  // container.append(popover);
 
   button.classList.add("hotspot-button");
   button.style.top = top;
@@ -36,13 +28,13 @@ function createButton(
       popover.showPopover();
       popover.classList.add("show");
 
-      if (container.clientHeight - button.offsetTop < 100) {
-        popover.style.top = `${
-          rect.top + window.scrollY - popover.clientHeight
-        }px`;
-      } else {
-        popover.style.top = `${rect.bottom + window.scrollY}px`;
-      }
+      // if (container.clientHeight - button.offsetTop < 100) {
+      //   popover.style.top = `${
+      //     rect.top + window.scrollY - popover.clientHeight
+      //   }px`;
+      // } else {
+      popover.style.top = `${rect.bottom + window.scrollY}px`;
+      // }
       if (popover.clientWidth - button.offsetLeft < popover.clientWidth) {
         popover.style.left = `${
           rect.right + window.scrollX - popover.clientWidth

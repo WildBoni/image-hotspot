@@ -1,6 +1,7 @@
 import { createButton } from "./button";
 import { createPopover } from "./popover";
 import { createImage } from "./image";
+import "./style.css";
 
 function createContainer() {
   const container = document.createElement("div");
@@ -28,14 +29,9 @@ function createContainer() {
     parentElement.append(container);
   }
 
-  function getContainer() {
-    return container;
-  }
-
   return {
     addButton,
     render,
-    getContainer,
     addImage,
   };
 }
