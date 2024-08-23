@@ -1,4 +1,4 @@
-function createPopover(text: string, id: string) {
+function createPopover(id: string, text: string) {
   let popover = document.createElement("div");
   popover.id = id;
   popover.classList.add("popover-content");

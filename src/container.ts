@@ -11,10 +11,10 @@ function createContainer() {
   function addButton(
     top: string,
     left: string,
-    popoverText: string,
-    popoverId: string
+    popoverId: string,
+    popoverText: string
   ) {
-    let popover = createPopover(popoverText, popoverId);
+    let popover = createPopover(popoverId, popoverText);
     container.append(popover);
     let button = createButton(top, left, popover, container);
     container.append(button);

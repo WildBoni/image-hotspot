@@ -1,4 +1,4 @@
-import { createContainer } from "../dist/index.js";
+import { createContainer } from "../dist/image-hotspot.es.js";
 
 let container = createContainer();
 
