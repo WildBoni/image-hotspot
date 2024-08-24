@@ -1,6 +1,7 @@
 import { createButton } from "./button";
 import { createPopover } from "./popover";
 import { createImage } from "./image";
+import { Popover } from "./popover.interface";
 import "./style.css";
 
 function createContainer() {
@@ -14,7 +15,7 @@ function createContainer() {
     popoverId: string,
     popoverText: string
   ) {
-    let popover = createPopover(popoverId, popoverText);
+    let popover: Popover = createPopover(popoverId, popoverText);
     container.append(popover);
     let button = createButton(top, left, popover, container);
     container.append(button);

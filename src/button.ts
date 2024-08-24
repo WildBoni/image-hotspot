@@ -1,10 +1,18 @@
+import markerUrl from "./marker.svg?url";
+import { Popover } from "./popover.interface";
+
+interface ButtonWithPopover extends HTMLButtonElement {
+  popoverTargetAction: string;
+  popoverTargetElement: Element | null;
+}
+
 function createButton(
   top: string,
   left: string,
-  popover: HTMLDivElement,
+  popover: Popover,
   container: HTMLDivElement
 ) {
-  const button = document.createElement("button");
+  const button = document.createElement("button") as ButtonWithPopover;
 
   button.classList.add("hotspot-button");
   button.style.top = top;
@@ -13,7 +21,7 @@ function createButton(
   button.popoverTargetAction = "show";
 
   let image = document.createElement("img");
-  image.src = "/marker.svg";
+  image.src = markerUrl;
   image.alt = "popover marker";
   button.append(image);
 
