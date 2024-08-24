@@ -16,3 +16,5 @@ It uses the latest popover API
   - container.addButton("40%", "30%", "pop2", "test 2");
 - Render the container inside your DOM:
   - container.render(document.querySelector("#app"));
+
+## WARNING: this library is still unstable!

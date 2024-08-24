@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/WildBoni/image-hotspot"
   },
-  "main": "dist/image-hotspot.cjs.js",
+  "main": "dist/image-hotspot.es.js",
   "module": "dist/image-hotspot.es.js",
   "types": "dist/main.d.ts",
   "scripts": {

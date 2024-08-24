@@ -9,7 +9,7 @@ export default defineConfig({
     assetsInlineLimit: 0,
     lib: {
       entry: path.resolve(__dirname, "src/main.ts"),
-      name: "imageHospot",
+      name: "imageHotspot",
       fileName: (format) => `image-hotspot.${format}.js`,
     },
     rollupOptions: {

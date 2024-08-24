@@ -4,6 +4,13 @@ import { createImage } from "./image";
 import { Popover } from "./popover.interface";
 import "./style.css";
 
+if (typeof document !== "undefined") {
+  const styleElement = document.createElement("link");
+  styleElement.rel = "stylesheet";
+  styleElement.href = new URL("./style.css", import.meta.url).href;
+  document.head.appendChild(styleElement);
+}
+
 function createContainer() {
   const container = document.createElement("div");
   container.id = "container";
