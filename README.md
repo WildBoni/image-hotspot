@@ -16,5 +16,13 @@ It uses the latest popover API
   - container.addButton("40%", "30%", "pop2", "test 2");
 - Render the container inside your DOM:
   - container.render(document.querySelector("#app"));
+- CSS is not perfectly bundled inside JS: you should import it manually in your project, eg:
+
+```html
+<link
+  rel="stylesheet"
+  href="./node_modules/easy-image-hotspot/dist/style.css"
+/>
+```
 
 ## WARNING: this library is still unstable!
