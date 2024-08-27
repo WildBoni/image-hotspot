@@ -26,7 +26,8 @@
     ".": {
       "import": "./dist/image-hotspot.es.js",
       "require": "./dist/image-hotspot.cjs.js"
-    }
+    },
+    "./dist/style.css": "./dist/style.css"
   },
   "keywords": [
     "hotspot"
