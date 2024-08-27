@@ -1,6 +1,6 @@
 {
   "name": "easy-image-hotspot",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "A simple image hotspot library using popover API.",
   "author": "Davide Bonifacio",
   "license": "MIT",
