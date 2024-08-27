@@ -2,7 +2,7 @@ import { createButton } from "./button";
 import { createPopover } from "./popover";
 import { createImage } from "./image";
 import { Popover } from "./popover.interface";
-import "./style.css?url";
+import "./style.css";
 
 function createContainer() {
   const container = document.createElement("div");
