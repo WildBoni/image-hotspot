@@ -16,7 +16,9 @@
     "build:example": "npm run build && vite --config examples/vite.config.ts",
     "dev": "vite",
     "preview": "npm run build && vite preview",
-    "preview:example": "npm run build:example && vite preview --config examples/vite.config.ts"
+    "preview:example": "npm run build:example && vite preview --config examples/vite.config.ts",
+    "test-dev": "vitest",
+    "test": "vitest run"
   },
   "files": [
     "dist"
@@ -36,6 +38,7 @@
     "@types/node": "^22.4.1",
     "typescript": "^5.5.3",
     "vite": "^5.4.0",
-    "vite-plugin-dts": "^2.1.0"
+    "vite-plugin-dts": "^2.1.0",
+    "vitest": "^2.0.5"
   }
 }
