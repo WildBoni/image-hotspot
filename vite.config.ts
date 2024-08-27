@@ -6,7 +6,6 @@ import dts from "vite-plugin-dts";
 
 export default defineConfig({
   build: {
-    assetsInlineLimit: 0,
     lib: {
       entry: path.resolve(__dirname, "src/main.ts"),
       name: "imageHotspot",

@@ -19,9 +19,9 @@
     "preview:example": "npm run build:example && vite preview --config examples/vite.config.ts"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
+  "style": "dist/style.css",
   "exports": {
     ".": {
       "import": "./dist/image-hotspot.es.js",
